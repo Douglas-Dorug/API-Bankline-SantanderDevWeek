@@ -15,11 +15,15 @@ public class Correntista {
     @Column(length = 60)
     private String nome;
 
+    public Conta getConta() {
+        return conta;
+    }
+
     @Embedded
     private Conta conta;
 
-    private Conta getConta(){
-        return conta;
+    public void setConta(Conta conta) {
+        this.conta = conta;
     }
 
     public Integer getId() {
